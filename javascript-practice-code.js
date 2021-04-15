@@ -219,3 +219,25 @@ function createName () {
   let userName = document.getElementById("userName").value;
   document.getElementById("sayHello").innerHTML="Hello " + userName + " how's your day going?";
 }
+
+//14. Write a JavaScript exercise to get the extension of a filename.
+
+function getExtension () {
+  let fullName = document.getElementById("fileName").value;
+  let fileExtension = fullName.split('.').pop();
+  document.getElementById("fileExtension").innerHTML = "Extension is " + fileExtension;
+}
+
+//15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.
+
+function getResult() {
+  let startValue = document.getElementById("givenNumber").value;
+  let calcDiff = startValue - 13;
+  if (calcDiff > 13) {
+    calcDiff * 2;
+  }
+
+  else {
+    document.getElementById("result").innerHTML = calcDiff;
+  }
+}
