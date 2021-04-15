@@ -184,3 +184,38 @@ function divideBy()
   num2 = document.getElementById("secondNumber").value;
   document.getElementById("result").innerHTML = num1 / num2;
 }
+
+//11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.  Go to the editor
+// [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
+// Expected Output :
+// 60°C is 140 °F
+// 45°F is 7.222222222222222°C
+//F = c*9/5 + 32
+//C = (f-32) * 5/9
+
+function convertCF() {
+  fahrenheit = document.getElementById("fahrenheit").value;
+  celsius = document.getElementById("celsius").value;
+  let conversion =  celsius*9/5 + 32;
+  document.getElementById("conversionResult").innerHTML = conversion;
+}
+
+function convertFC() {
+  fahrenheit = document.getElementById("fahrenheit").value;
+  celsius = document.getElementById("celsius").value;
+  let conversion = (fahrenheit-32) * 5/9;
+  document.getElementById("conversionResult").innerHTML = conversion;
+}
+
+//12. Write a JavaScript program to get the website URL (loading page).
+
+function getPage() {
+  document.getElementById("pageURL").innerHTML = window.location.href;
+}
+
+//13. Write a JavaScript exercise to create a variable using a user-defined name
+
+function createName () {
+  let userName = document.getElementById("userName").value;
+  document.getElementById("sayHello").innerHTML="Hello " + userName + " how's your day going?";
+}

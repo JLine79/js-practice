@@ -112,6 +112,44 @@
     <li>I still need to practise talking to the DOM because I couldn't get it to talk to the buttons</li>
   </ul>
 
+  <p>11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.</p>
+  <p>[ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]</p>
+  <p>Expected Output :  60°C is 140 °F</p>
+  <p>45°F is 7.222222222222222°C</p>
+
+  <form>
+    Celsius : <input type="text" id="celsius" /><br>
+    Fahrenheit : <input type="text" id="fahrenheit" /><br><br>
+    <input type="button" onClick="convertCF()" Value="convert Celsius" />
+    <input type="button" onClick="convertFC()" Value="convert Fahrenheit"/>
+  </form>
+
+  <p id="conversionResult"></p>
+
+  <ul>
+    <li>Practice maths! I still don't quite know how to get to the right formula for these answers</li>
+    <li>F = c*9/5 + 32</li>
+    <li>C = (f-32) * 5/9</li>
+  </ul>
+
+  <p>12. Write a JavaScript program to get the website URL (loading page).</p>
+
+  <button id="getPage" onClick="getPage()">Get Page URL</button>
+  <p id="pageURL"></p>
+
+  <p>13. Write a JavaScript exercise to create a variable using a user-defined name.</p>
+
+  <form>
+    <input type="text" id="userName" value="" />
+    <input type="button" onClick="createName()" value="Say hello"/>
+  </form>
+
+  <p id="sayHello"></p>
+
+  <ul>
+    <li>So the answer to this one didn't help really.</li>
+    <li>Remember you can get a value from a field using "document.getElementById("id").value</li>
+  </ul>
 
 <script src="javascript-practice-code.js"></script> 
 
