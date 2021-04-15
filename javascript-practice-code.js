@@ -167,3 +167,22 @@ function howManyDays (){
 
 howManyDays()
 
+//10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user).
+
+function calcResult(){
+  let a = document.getElementById("inputA");
+  let b = document.getElementById("inputB");
+  let multiply = document.getElementById("multiply");
+  let divide = document.getElementById("divide");
+  
+
+  if (multiply) {
+    return (a*b);
+  }
+
+  if (divide) {
+    return (a/b);
+  }
+}
+
+calcResult();
