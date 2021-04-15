@@ -96,10 +96,21 @@
 
 <p>10. Write a JavaScript program to calculate multiplication and division of two numbers (input from user). </p>
 
-<p><input type="number" id="inputA" name="inputA"></p>
-<p><input type="number" id="inputB" name="inputB"></p>
-<button id="multiply" onClick="calcResult()">Multiply</button>
-<button id="divide" onClick="calcResult()">Divide</button>
+<form>
+  1st Number : <input type="text" id="firstNumber" /><br>
+  2nd Number: <input type="text" id="secondNumber" /><br>
+  <input type="button" onClick="multiplyBy()" Value="Multiply" />
+  <input type="button" onClick="divideBy()" Value="Divide" />
+</form>
+  <p>The Result is : <br>
+  <span id = "result"></span>
+  </p>
+
+  <ul>
+    <li>There are loads of red squiggly lines on VB Code for this function which made me think it wouldn't work</li>
+    <li>In the end I copied it from the JSFiddle answer and it was basically the same as my original code BUT</li>
+    <li>I still need to practise talking to the DOM because I couldn't get it to talk to the buttons</li>
+  </ul>
 
 
 <script src="javascript-practice-code.js"></script> 
