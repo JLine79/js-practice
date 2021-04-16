@@ -249,4 +249,27 @@ function getResult() {
   document.getElementById("diffResult").innerHTML = endValue;
 }
 
+//16. Write a JavaScript program to compute the sum of the two given integers. 
+//If the two values are same, then returns triple their sum. 
+
+function computeTriple() {
+  let a = document.getElementById("integerA").value;
+  let b = document.getElementById("integerB").value;
+  let aNum = parseInt(a, 10);
+  let bNum = parseInt(b, 10);
+  let getSum;
+
+  if (aNum == bNum) {
+    getSum = (aNum + bNum)* 3;
+  }
+
+  else {
+    getSum = aNum + bNum;
+  }
+
+  let finalSum = getSum.toString();
+
+  document.getElementById("finalSum").innerHTML = finalSum;
+}
+
   
