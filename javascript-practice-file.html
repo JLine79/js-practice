@@ -163,11 +163,16 @@
   <p>15. Write a JavaScript program to get the difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</p>
 
   <form>
-    <input type="text" id="givenNumber" value=""/>
+    <input type="number" id="givenNumber" value=""/>
     <input type="button" id="diff" onclick="getResult()" value="get result"/>
   </form>
 
-  <p id="result"></p>
+  <p>The result is <span id="diffResult"></span></p>
+
+  <ul>
+    <li>Spent ages trying to figure out why the function wasn't working only to discover I hadn't put the end p tag on</p></li>
+    <li>Had to rejig the maths to account for smaller numbers going negative with -13, changed the if statement to avoid that</li>
+  </ul>
 
 <script src="javascript-practice-code.js"></script> 
 

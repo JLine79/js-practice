@@ -232,12 +232,21 @@ function getExtension () {
 
 function getResult() {
   let startValue = document.getElementById("givenNumber").value;
-  let calcDiff = startValue - 13;
-  if (calcDiff > 13) {
-    calcDiff * 2;
+  let valueInt = parseInt(startValue, 10);
+  let calcDiff;
+  if (valueInt >= 13) {
+    calcDiff = (valueInt - 13)*2;
   }
 
   else {
-    document.getElementById("result").innerHTML = calcDiff;
+    calcDiff = 13 - valueInt;
   }
+  
+  console.log(calcDiff);
+
+  let endValue = calcDiff.toString();
+
+  document.getElementById("diffResult").innerHTML = endValue;
 }
+
+  
