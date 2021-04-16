@@ -272,4 +272,61 @@ function computeTriple() {
   document.getElementById("finalSum").innerHTML = finalSum;
 }
 
+//17. Write a JavaScript program to compute the absolute difference between a specified number and 19. 
+//Returns triple their absolute difference if the specified number is greater than 19. 
+
+function diffNineteen () {
+  let startNumber = document.getElementById("startNumber").value;
+  let startInt = parseInt(startNumber, 10);
+  let resultNineteen;
+  if (startInt >= 19) {
+    resultNineteen = (startInt - 19) * 3;
+  }
+
+  else {
+    resultNineteen = 19 - startInt;
+  }
+
+  let nineteenAnswer = resultNineteen.toString();
+
+  document.getElementById("nineteenAnswer").innerHTML = nineteenAnswer;
+}
+
+//18. Write a JavaScript program to check two given numbers and return true if one of the number is 50 
+//or if their sum is 50.
+
+function findFifty () {
+  let a = document.getElementById("qu18numberA").value;
+  let b = document.getElementById("qu18numberB").value;
+  let numA = parseInt(a, 10);
+  let numB = parseInt(b, 10);
+  let checkSum = (numA + numB);
+  let isFifty;
+
+  if (checkSum == 50 || numA == 50 || numB == 50) {
+    isFifty = "true";
+  }
+
+  else {
+    isFifty = "nope!"
+  }
+
+  document.getElementById("resultIsFifty").innerHTML=isFifty;
+}
+
+//19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400. 
+
+function enterNumber () {
+  let startInt = prompt("Give me a number","");
+  let convertInt = parseInt(startInt);
+    function withinTwenty (){
+    let resultTwenty = (Math.abs(100 - convertInt) <= 20) || (Math.abs(400 - convertInt) <= 20);
+    let outputTwenty = resultTwenty.toString();
+    document.getElementById("withinTwenty").innerHTML = outputTwenty;
+    }
+  withinTwenty();
+}
   
+  //let startInt = parseInt(startNumber, 10);
+  //let resultTwenty = (Math.abs(100 - x) <= 20) || (Math.abs(400 - x) <= 20);
+  //console.log(resultTwenty);
