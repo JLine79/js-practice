@@ -327,6 +327,26 @@ function enterNumber () {
   withinTwenty();
 }
   
-  //let startInt = parseInt(startNumber, 10);
-  //let resultTwenty = (Math.abs(100 - x) <= 20) || (Math.abs(400 - x) <= 20);
-  //console.log(resultTwenty);
+//20. Write a JavaScript program to check from two given integers, whether one is positive and another one is negative.
+
+function checkPolarity () {
+  let startA = document.getElementById("numberOne").value;
+  let startB = document.getElementById("numberTwo").value;
+  let a = parseInt(startA, 10);
+  let b = parseInt(startB, 10);
+  let checkNumbers;
+
+  if ((a < 0 && b > 0) || (b < 0 && a > 0)){
+    checkNumbers = true;
+  }
+
+  else {
+    checkNumbers = false;
+  }
+
+  let checkResult = checkNumbers.toString();
+  document.getElementById("checkResult").innerHTML = checkResult;
+  console.log(checkNumbers);
+}
+
+
