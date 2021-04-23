@@ -352,6 +352,56 @@ function checkPolarity () {
 //21. Write a JavaScript program to create a new string adding "Py" in front of a given string. 
 //If the given string begins with "Py" then return the original string. 
 
+function addPy () {
+    let getWord = prompt("Give me a word");
+     if (getWord.startsWith("Py")) {
+    document.getElementById("returnString").innerHTML = getWord;
+    }
 
+    else {
+    document.getElementById("returnString").innerHTML = "Py" + getWord;
+    }
+  }
+
+//22. Write a JavaScript program to remove a character at the specified position of a given string and return the new string. 
+
+function amendString (a, x) {
+  //get start of string to specified index
+  let startString = a.substring(0,x);
+  //get end of string from specified index + 1 (skip index letter)
+  let endString = a.substring(x + 1, a.length);
+  //concatenate the substrings
+  return (startString + endString);
+}
+
+console.log (amendString ("Fudge", 3));
+
+//23. Write a JavaScript program to create a new string from a given string changing the position of first 
+//and last characters. The string length must be greater than or equal to 1.
+
+function firstLast (a) {
+  //check string length
+  let checkLength = a.length;
+    if (checkLength >= 1) {
+      //get first character
+      let firstChar = a.substring(0, 1);
+      //get last character
+      let lastChar = a.substring(a.length-1);
+      //get middle section 
+      let middleChar = a.substring(1, a.length-1);
+      //concatenate new string
+      let newString = lastChar + middleChar + firstChar;
+    
+      console.log (newString);
+    }
+
+    else {
+      console.log ("The string must have more than one character");
+    }
+  }
+  firstLast("speed");
+
+  
+  
 
 
