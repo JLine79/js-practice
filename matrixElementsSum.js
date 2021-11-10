@@ -6,51 +6,20 @@ const testMatrix =
  [2,0,3,3]]
 
 function matrixElementsSum(matrix) {
-    
-}
-
-//matrixElementsSum(matrix)
-
-
-// create variable to store non-zero values
-let storeValues = 0;
-const storeZeros = []
-const storeSingles = (matrix) => {
-    // loop the first array
-    const firstArray = matrix[0]
-    for (let j = 0; j < firstArray.length; j++) {
-        let currentValue = firstArray[j]
-        if (currentValue === 0) {
-            storeZeros.push(j)
-        } else {
-            storeValues += currentValue
-        }
-    }
-}
-
-storeSingles(testMatrix)
-
-const checkNext = (matrix) => {
+    //store start at index value
+    let totalSum = 0
     for (let i = 0; i < matrix.length; i++) {
-        for (let j = 0; j < matrix[i].length; j++) {
-            if (j === storeZeros[j] || j === 0) {
-                continue
+        let innerArray = matrix[i]
+        let innerArrayLength = matrix[i].length;
+        for (let j = 0; j < innerArrayLength; j++) {
+            if (innerArray[j] === 0 && i+1 < matrix.length) {
+                matrix[i+1][j] = 0
             }
-
-            else {
-                storeValues += j
-            }
+            totalSum += innerArray[j]
         }
     }
-    console.log(storeValues)
+    return totalSum
 }
 
-checkNext(testMatrix)
-    
-  
 
-// Store index positions of 0s
-// Store values of positions that are not 0s
-// Look at values of numbers that are not 0 in previous array
-// Store index positions of 0s
-// Store values of positions that are not 0s
+matrixElementsSum(testMatrix)
